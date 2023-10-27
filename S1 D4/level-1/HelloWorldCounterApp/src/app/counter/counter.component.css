@@ -1,0 +1,30 @@
+/* counter.component.css */
+button {
+    background-color: #28a745;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  .count-display {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .action-buttons button {
+    margin: 0 10px;
+  }
+  
