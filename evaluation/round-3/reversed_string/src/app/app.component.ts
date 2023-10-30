@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   inputString: string = '';
-  reversedString: String = '';
+  reversedString: string = '';
 
-  reverseString(): void{
+  reverseString(): void {
     this.reversedString = this.inputString.split('').reverse().join('');
   }
 
