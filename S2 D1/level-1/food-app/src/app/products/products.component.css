@@ -1,0 +1,83 @@
+/* products.component.css */
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.product-card {
+  width: calc(18.333% - 20px);
+  height: 250px; /* Adjust the card height as needed */
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-info {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.product-info img {
+  max-width: 150px;
+  max-height: 150px;
+  margin-right: 10px; /* Add margin between image and button */
+}
+
+.product-details h2 {
+  margin-top: 0;
+}
+
+.product-card .favorite-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card .favorite-button .fa {
+  font-size: 18px;
+  color: #ea3209;
+}
+  
+  .product-card button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid #4caf50;
+  }
+  /* heart-button.css */
+
+.heart-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 30px; /* Set the width of the button */
+  height: 30px; /* Set the height of the button */
+  position: relative;
+}
+
+.heart-button::before {
+  content: '\2665'; /* Unicode for heart symbol */
+  font-size: 24px; /* Set the size of the heart icon */
+  color: #ff5733; /* Set the color of the heart icon */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: color 0.3s ease;
+}
+
+.heart-button.active::before {
+  color: red; /* Change the color when button is active (e.g., favorited) */
+}
+
+  

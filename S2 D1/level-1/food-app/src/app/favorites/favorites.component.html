@@ -1,0 +1,24 @@
+<!-- favorite.component.html -->
+
+<div class="favorite-container">
+    <div class="favorite-header">
+      <h2>Favorite Products:</h2>
+    </div>
+  
+    <div *ngIf="favoriteProducts.length > 0" class="favorite-items">
+      <ul>
+        <li *ngFor="let product of favoriteProducts" class="favorite-item">
+          <img [src]="product.image" alt="{{ product.name }}" class="favorite-item-image">
+          <div class="favorite-item-details">
+            <p>{{ product.name }} - ${{ product.price }}</p>
+          </div>
+          <button (click)="removeFromFavorites(product)" class="remove-button">Remove</button>
+        </li>
+      </ul>
+    </div>
+  
+    <div *ngIf="favoriteProducts.length === 0" class="empty-favorites-message">
+      <p>No favorite products.</p>
+    </div>
+  </div>
+  

@@ -1,0 +1,35 @@
+<div class="filters">
+    <label for="category">Filter by Category:</label>
+    <select id="category">
+      <option value="chicken">Chicken</option>
+      <option value="rice">Rice</option>
+      <option value="fish">Fish</option>
+      <option value="fruit">Fruit</option>
+      <option value="icecream">Ice Cream</option>
+      <option value="softdrink">Soft Drink</option>
+    </select>
+  
+    <label for="sortBy">Sort by Price:</label>
+    <select id="sortBy">
+      <option value="asc">Low to High</option>
+      <option value="desc">High to Low</option>
+    </select>
+  </div>
+  
+  <div class="products">
+    <div class="product-card" *ngFor="let product of products">
+      <div class="product-info">
+        <img [src]="product.image" alt="{{ product.name }}">
+        <button class="heart-button" (click)="toggleFavorite(product)">
+          <i class="fa" [ngClass]="{'fa-heart': product.isFavorite, 'fa-heart-o': !product.isFavorite}"></i>
+        </button>
+      </div>
+      <div class="product-details">
+        <h2>{{ product.name }}</h2>
+        <p>Price: ${{ product.price }}</p>
+        <button (click)="viewDetails(product)">View Details</button>
+        <button (click)="addToCart(product)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  

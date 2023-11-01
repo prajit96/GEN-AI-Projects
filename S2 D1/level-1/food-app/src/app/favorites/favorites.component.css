@@ -1,0 +1,49 @@
+/* favorite.component.css */
+
+.favorite-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .favorite-header {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .favorite-items {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .favorite-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .favorite-item img {
+    max-width: 60px;
+    max-height: 60px;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+  
+  .favorite-item-details {
+    flex: 1;
+  }
+  
+  .empty-favorites-message {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
