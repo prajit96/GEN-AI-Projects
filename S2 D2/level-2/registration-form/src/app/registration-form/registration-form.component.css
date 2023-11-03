@@ -1,0 +1,97 @@
+/* Style for form container */
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+/* Style for form groups */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Style for labels */
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Style for input fields */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Style for error messages */
+.error-message {
+  color: #ff0000;
+  margin-top: 5px;
+}
+
+/* Style for submitted data container */
+.submitted-data {
+  margin-top: 20px;
+}
+
+/* Style for submitted data images */
+.submitted-data img {
+  max-width: 200px;
+  margin-top: 10px;
+}
+
+/* Style for buttons */
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-primary:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+/* Style for submitted data container */
+.submitted-data {
+  margin-top: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for submitted data images */
+.submitted-data img {
+  max-width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+/* Style for submitted data fields */
+.submitted-data p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* Style for section headers in submitted data */
+.submitted-data h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #007bff;
+}

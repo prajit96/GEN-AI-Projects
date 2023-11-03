@@ -1,0 +1,60 @@
+<div class="form-container">
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" class="form-control" id="name" formControlName="name">
+    <div *ngIf="profileForm.get('name')?.invalid && profileForm.get('name')?.touched">
+      <div *ngIf="profileForm.get('name')?.hasError('required')">Name is required.</div>
+      <div *ngIf="profileForm.get('name')?.hasError('minlength')">Name must be at least 3 characters long.</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email" formControlName="email">
+    <div *ngIf="profileForm.get('email')?.invalid && profileForm.get('email')?.touched">
+      <div *ngIf="profileForm.get('email')?.hasError('required')">Email is required.</div>
+      <div *ngIf="profileForm.get('email')?.hasError('email')">Invalid email address.</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="dob">Date of Birth:</label>
+    <input type="date" class="form-control" id="dob" formControlName="dob">
+    <div *ngIf="profileForm.get('dob')?.invalid && profileForm.get('dob')?.touched">
+      <div *ngIf="profileForm.get('dob')?.hasError('required')">Date of Birth is required.</div>
+      <!-- You can add minimum age validation message here -->
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Phone:</label>
+    <input type="text" class="form-control" id="phone" formControlName="phone">
+    <div *ngIf="profileForm.get('phone')?.invalid && profileForm.get('phone')?.touched">
+      <div *ngIf="profileForm.get('phone')?.hasError('pattern')">Invalid phone number format (e.g., (123) 456-7890).</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="profilePicture">Profile Picture:</label>
+    <input type="file" class="form-control" id="profilePicture" (change)="onFileChange($event)">
+    <div *ngIf="profileForm.get('profilePicture')?.value">
+      <img [src]="profileForm.get('profilePicture')?.value" alt="Profile Picture" style="max-width: 200px;">
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="profileForm.invalid">Submit</button>
+</form>
+</div>
+<div *ngIf="submittedData" class="submitted-data">
+  <h2>Submitted Data:</h2>
+  <div *ngIf="submittedData.profilePicture">
+    <h2>Profile Picture:</h2>
+    <img [src]="submittedData.profilePicture" alt="Profile Picture" style="max-width: 200px;">
+  </div>
+  <p><strong>Name:</strong> {{ submittedData.name }}</p>
+  <p><strong>Email:</strong> {{ submittedData.email }}</p>
+  <p><strong>Date of Birth:</strong> {{ submittedData.dob }}</p>
+  <p *ngIf="submittedData.phone"><strong>Phone:</strong> {{ submittedData.phone }}</p>
+  <!-- You can display other form fields similarly -->
+</div>
