@@ -66,7 +66,7 @@ input[type="file"] {
   background-color: #ccc;
   cursor: not-allowed;
 }
-/* Style for submitted data container */
+
 .submitted-data {
   margin-top: 20px;
   background-color: #ffffff;
@@ -76,20 +76,17 @@ input[type="file"] {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Style for submitted data images */
 .submitted-data img {
   max-width: 100%;
   margin-top: 10px;
   border-radius: 5px;
 }
 
-/* Style for submitted data fields */
 .submitted-data p {
   font-size: 16px;
   margin: 10px 0;
 }
 
-/* Style for section headers in submitted data */
 .submitted-data h2 {
   font-size: 20px;
   margin-bottom: 10px;
