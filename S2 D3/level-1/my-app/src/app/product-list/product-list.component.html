@@ -1,0 +1,20 @@
+<!-- product-list.component.html -->
+<div *ngIf="loading" class="loading-message">Loading...</div>
+<div *ngIf="error" class="error-message">{{ error }}</div>
+<div *ngIf="!loading && !error" class="product-container">
+  <div *ngFor="let product of products" (click)="showProductDetails(product)" class="product-card">
+    <img [src]="product.image" alt="{{ product.title }}" class="product-image">
+    <h2 class="product-title">{{ product.title }}</h2>
+    <p class="product-description">{{ product.description }}</p>
+    <p class="product-price">Price: ${{ product.price }}</p>
+  </div>
+</div>
+
+<div *ngIf="selectedProduct" class="modal">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <h2>{{ selectedProduct.title }}</h2>
+    <p>{{ selectedProduct.description }}</p>
+    <p>Price: ${{ selectedProduct.price }}</p>
+  </div>
+</div>
