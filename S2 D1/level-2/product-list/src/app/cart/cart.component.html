@@ -1,0 +1,19 @@
+<!-- cart.component.html -->
+
+<div *ngIf="cartItems.length > 0" class="cart-container">
+  <h2>Cart Items:</h2>
+  <ul class="cart-items">
+    <li *ngFor="let item of cartItems" class="cart-item">
+      <img [src]="item.image" alt="{{ item.title }}" class="cart-item-image">
+      <div class="cart-item-details">
+        <p>{{ item.title }}</p>
+        <p>Price: ${{ item.price }}</p>
+      </div>
+      <button (click)="removeFromCart(item)" class="remove-button">Remove</button>
+    </li>
+  </ul>
+  <div class="total-price">Total: ${{ getTotalPrice() }}</div>
+</div>
+<div *ngIf="cartItems.length === 0" class="empty-cart-message">
+<p>Your cart is empty.</p>
+</div>
