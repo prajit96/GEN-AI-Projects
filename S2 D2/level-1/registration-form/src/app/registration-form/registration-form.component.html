@@ -1,0 +1,43 @@
+<div *ngIf="showForm">
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <h1>Registration</h1>
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" formControlName="name">
+      <div *ngIf="registrationForm.get('name')?.errors?.['required'] && registrationForm.get('name')?.touched">Name is required.</div>
+      <div *ngIf="registrationForm.get('name')?.errors?.['minlength'] && registrationForm.get('name')?.dirty">Name must be at least 3 characters long.</div>
+    </div>
+    <div>
+      <label for="email">Email address</label>
+      <input type="email" id="email" formControlName="email">
+      <div *ngIf="registrationForm.get('email')?.errors?.['required'] && registrationForm.get('email')?.touched">Email is required.</div>
+      <div *ngIf="registrationForm.get('email')?.errors?.['email'] && registrationForm.get('email')?.touched">Invalid email format.</div>
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" id="password" formControlName="password">
+      <div *ngIf="registrationForm.get('password')?.errors?.['required'] && registrationForm.get('password')?.touched">Password is required.</div>
+      <div *ngIf="registrationForm.get('password')?.errors?.['invalidPassword'] && registrationForm.get('password')?.touched">Password must contain...</div>
+    </div>
+    <div>
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" id="confirmPassword" formControlName="confirmPassword">
+      <div *ngIf="registrationForm.get('confirmPassword')?.errors?.['required'] && registrationForm.get('confirmPassword')?.touched">Confirm Password is required.</div>
+    </div>
+    <div>
+      <label for="phoneNumber">Phone number</label>
+      <input type="tel" id="phoneNumber" formControlName="phoneNumber" pattern="\(\d{3}\) \d{3}-\d{4}">
+      <div *ngIf="registrationForm.get('phoneNumber')?.errors?.['pattern'] && registrationForm.get('phoneNumber')?.touched">Invalid phone number format. Use (123) 456-7890 format.</div>
+    </div>
+    <button type="submit" [disabled]="registrationForm.invalid">Submit</button>
+  </form>
+</div>
+
+<div *ngIf="!showForm">
+  <h2>Submitted Data</h2>
+  <p><strong>Name:</strong> {{ registrationForm.value.name }}</p>
+  <p><strong>Email:</strong> {{ registrationForm.value.email }}</p>
+  <p><strong>Password:</strong> {{ registrationForm.value.password }}</p>
+  <p><strong>Phone Number:</strong> {{ registrationForm.value.phoneNumber }}</p>
+  <!-- Add more fields as needed -->
+</div>
