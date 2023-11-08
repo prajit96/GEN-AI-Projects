@@ -1,0 +1,18 @@
+<div *ngIf="task">
+  <h2>Task Details</h2>
+  <div>
+    <strong>Title:</strong> {{ task.title }}
+  </div>
+  <div>
+    <strong>Description:</strong> {{ task.description }}
+  </div>
+  <div>
+    <strong>Completed:</strong> {{ task.completed ? 'Yes' : 'No' }}
+  </div>
+  <br>
+  <button routerLink="/tasks">Back to Task List</button>
+</div>
+
+<div *ngIf="!task">
+  <p>Task not found!</p>
+</div>

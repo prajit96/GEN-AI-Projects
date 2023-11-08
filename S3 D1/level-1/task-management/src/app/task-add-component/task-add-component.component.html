@@ -1,0 +1,9 @@
+<form (ngSubmit)="addTask()">
+  <label>Title:</label>
+  <input [(ngModel)]="task.title" [ngModelOptions]="{standalone: true}" required><br>
+  <label>Description:</label>
+  <textarea [(ngModel)]="task.description" [ngModelOptions]="{standalone: true}" required></textarea><br>
+  <label>Completed:</label>
+  <input type="checkbox" [(ngModel)]="task.completed" [ngModelOptions]="{standalone: true}"><br>
+  <button type="submit">Add Task</button>
+</form>
