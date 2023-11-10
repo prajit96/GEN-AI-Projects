@@ -1,0 +1,55 @@
+
+.weather-dashboard {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.weather-data {
+  margin-top: 20px;
+}
+
+.weather-data h2 {
+  color: #333;
+}
+
+.user-preferences {
+  margin-top: 15px;
+}
+
+.user-preferences label {
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.user-preferences input {
+  margin-right: 5px;
+}
+
+.update-interval {
+  margin-top: 15px;
+}
+
+.update-interval label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.update-interval select {
+  padding: 8px;
+}
