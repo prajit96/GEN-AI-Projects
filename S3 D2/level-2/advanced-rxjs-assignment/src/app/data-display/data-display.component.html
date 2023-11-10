@@ -1,0 +1,9 @@
+<!-- src/app/data-display/data-display.component.html -->
+<div class="data-display">
+    <h2>Data Display Component</h2>
+    <p>Data:</p>
+    <ul>
+        <li *ngIf="receivedData !== null">{{ receivedData }}</li>
+    </ul>
+    <p class="error-message" *ngIf="error !== null">{{ error }}</p>
+</div>
